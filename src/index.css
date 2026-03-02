@@ -1,0 +1,45 @@
+/* --- index.css --- */
+
+/* 1. MOOD / THEME VARIABLES */
+:root {
+  --brand-color: #00D2B5;
+  --bg-color: #F8FAFC;
+  --text-dark: #0f172a;
+  --text-muted: #64748b;
+  --card-bg: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 2. GLOBAL ANIMATED TRANSITIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Reusable animation classes you can attach to any element */
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-up {
+  opacity: 0; /* starts hidden */
+  animation: slideUp 0.5s ease-out forwards;
+}
